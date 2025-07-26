@@ -1,0 +1,296 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e1a2b;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+header {
+  background-color: #111f3f;
+  border-bottom: 1px solid #203867;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #58a6ff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #e6e6e6;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #58a6ff;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 70vh;
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(15, 25, 49, 0.7);
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.hero-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  color: #cfd8dc;
+}
+
+/* Metrics section */
+.metrics {
+  background-color: #0b1730;
+  border-top: 1px solid #203867;
+}
+
+.metrics .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric {
+  background: #11254d;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.metric img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.8rem;
+}
+
+.metric h3 {
+  font-size: 1.2rem;
+  color: #58a6ff;
+  margin-bottom: 0.3rem;
+}
+
+.metric .value {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.metric .subtitle {
+  font-size: 0.9rem;
+  color: #a2b5cd;
+}
+
+/* Chart section */
+.charts {
+  background-color: #0e1a2b;
+  border-top: 1px solid #203867;
+  padding-bottom: 3rem;
+}
+
+.charts h2 {
+  color: #58a6ff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.charts canvas {
+  max-width: 100%;
+  background: #11254d;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* News section */
+.news {
+  background-color: #0b1730;
+  border-top: 1px solid #203867;
+  padding-bottom: 4rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.news-column h2 {
+  color: #58a6ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.article-card {
+  background: #11254d;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+}
+
+.article-card img {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.article-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  flex-grow: 0;
+}
+
+.article-content p {
+  font-size: 0.9rem;
+  color: #b0c4de;
+  flex-grow: 1;
+}
+
+.article-content a {
+  margin-top: 0.8rem;
+  color: #58a6ff;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+/* Ticker */
+.ticker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111f3f;
+  overflow: hidden;
+  border-top: 1px solid #203867;
+  color: #fff;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+
+/* The container for the ticker items that will be animated */
+.ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .hero-overlay h2 {
+    font-size: 1.8rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  .metric .value {
+    font-size: 1.7rem;
+  }
+}
