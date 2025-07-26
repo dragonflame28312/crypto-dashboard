@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Dashboard</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Crypto Dashboard</h1>
+      <nav>
+        <ul>
+          <li><a href="#metrics">Metrics</a></li>
+          <li><a href="#charts">Charts</a></li>
+          <li><a href="#news">News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay">
+      <h2>Stay Ahead of the Market</h2>
+      <p>Real‑time data, indices and news at your fingertips</p>
+    </div>
+  </section>
+
+  <!-- Metrics Section -->
+  <section id="metrics" class="metrics">
+    <div class="container grid">
+      <div class="metric" id="fearGreedBox">
+        <img src="images/fear_gauge.png" alt="Fear &amp; Greed icon">
+        <h3>Fear &amp; Greed</h3>
+        <p class="value" id="fearGreedValue">--</p>
+        <p class="subtitle">Market sentiment</p>
+      </div>
+      <div class="metric" id="altSeasonBox">
+        <img src="images/altcoin_icon.png" alt="Altseason icon">
+        <h3>Altseason</h3>
+        <p class="value" id="altSeasonValue">--</p>
+        <p class="subtitle">Altcoin dominance</p>
+      </div>
+      <div class="metric" id="mayerBox">
+        <img src="images/mayer_icon.png" alt="Mayer Multiple icon">
+        <h3>Mayer Multiple</h3>
+        <p class="value" id="mayerValue">--</p>
+        <p class="subtitle">Bitcoin price vs. average</p>
+      </div>
+      <div class="metric" id="globalCapBox">
+        <img src="images/market_cap.png" alt="Market Cap icon">
+        <h3>Global Market Cap</h3>
+        <p class="value" id="globalCapValue">--</p>
+        <p class="subtitle">Total crypto market</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chart Section -->
+  <section id="charts" class="charts">
+    <div class="container">
+      <h2>Mayer Multiple Trend</h2>
+      <canvas id="mayerChart"></canvas>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="news">
+    <div class="container news-grid">
+      <div class="news-column" id="cryptoNews">
+        <h2>Latest Crypto News</h2>
+        <div class="articles" id="cryptoArticles">
+          <!-- Crypto news will populate here -->
+        </div>
+      </div>
+      <div class="news-column" id="macroNews">
+        <h2>Global Macro News</h2>
+        <div class="articles" id="macroArticles">
+          <!-- Macro news will populate here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticker Bar -->
+  <div class="ticker" id="ticker">
+    <!-- Ticker items will scroll here -->
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
